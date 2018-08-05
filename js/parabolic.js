@@ -12,7 +12,7 @@ var DataChange = function() {
     var f = frequency.getValue();
     var angle = 360 / p;
     var anglerad = angle * Math.PI / 180;
-    var radius = 200;
+    var radius = $('#drawing').height() / 2;
     var step = radius / f;
 
     var lines = [];
@@ -40,6 +40,7 @@ var DataChange = function() {
         }
     }
     $('#svgsource').text(draw.svg());
+    $('#drawingimg').attr("src", "data:image/svg+xml;base64," + btoa(draw.svg()));
 };
 
 var points = $('#points-slider').slider()

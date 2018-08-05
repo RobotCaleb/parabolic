@@ -17,26 +17,28 @@
 
 <body>
   <div style="margin: 20px">
-    <div id="drawing" style="height: 400px; width: 400px"></div>
+    <img id="drawingimg" style="height: 300px; width: 300px" />
+    <div id="drawing" style="display: none; height: 300px; width: 300px"></div>
     <div>
       Points:
       <span id="points-span"></span>
       <br/>
-      <input id="points-slider" class="slider" data-slider-id='ex1Slider' type="text" data-slider-min="3" data-slider-max="20"
+      <input id="points-slider" style="width: 300px" class="slider" data-slider-id='ex1Slider' type="text" data-slider-min="3" data-slider-max="20"
         data-slider-step="1" data-slider-value="4" />
     </div>
     <div>
       Frequency:
       <span id="frequency-span"></span>
       <br/>
-      <input id="frequency-slider" class="slider" data-slider-id='ex1Slider' type="text" data-slider-min="2" data-slider-max="30"
+      <input id="frequency-slider" style="width: 300px" class="slider" data-slider-id='ex1Slider' type="text" data-slider-min="2" data-slider-max="30"
         data-slider-step="1" data-slider-value="10" />
     </div>
     <br/>
     <div>
-      <textarea id="svgsource"></textarea>
+      <button type="button" class="btn btn-primary" style="width: 300px" onclick="saveSVG();">Download SVG</button>
       <br/>
-      <button type="button" class="btn btn-primary" onclick="saveSVG();">Download SVG</button>
+      <br/>
+      <textarea id="svgsource" style="width: 300px"></textarea>
     </div>
   </div>
   <!-- Optional JavaScript -->
